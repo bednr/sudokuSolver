@@ -146,6 +146,7 @@ function drawSolvedBoard(array $board): void
 function drawInputBoard(): void
 {
     for ($i = 0; $i < GRID_SIZE; $i++) {
+        echo "<span>";
         for ($j = 0; $j < GRID_SIZE; $j++) {
             if ($j != 0 && $j % 3 == 0) {
                 echo "&nbsp";
@@ -156,7 +157,7 @@ function drawInputBoard(): void
             }
             echo ">";
         }
-        echo "<br/>";
+        echo "</span><br/>";
     }
     echo "<input type='submit' value='Solve!'>";
 }
